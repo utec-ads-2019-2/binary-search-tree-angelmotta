@@ -34,3 +34,5 @@
 # Visual Studio Code
 .vscode/ipch/
 
+cmake-build-debug/
+.idea/
