@@ -142,7 +142,7 @@ class BSTree {
     }
 
 public:
-    BSTree() : root(nullptr) {};
+    BSTree() : root(nullptr), nodes(0) {};
 
     bool find(T data) {
         if(!root) return false;

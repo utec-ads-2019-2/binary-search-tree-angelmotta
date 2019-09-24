@@ -19,7 +19,8 @@ void Tester::testBSFTree(Mocker mocker, vector<T> elements) {
     }
 
     sortAndPrune(elements);
-
+    cout << "elements_size: " << elements.size() << '\n';
+    cout << "test_size: " << test->size() << '\n';
     ASSERT(elements.size() == test->size(), "There is a problem with the insert or size");
 
     unsigned int toRemove = mocker.generateRandomInt(1, elements.size());
@@ -32,8 +33,8 @@ void Tester::testBSFTree(Mocker mocker, vector<T> elements) {
         ASSERT(test->find(temp) == (duplicates > 0), "There is a problem with the remove or find");
     }
 
-    /*ASSERT(elements.size() == test->size(), "There is a problem with the remove or size");
-
+    ASSERT(elements.size() == test->size(), "There is a problem with the remove or size");
+    /*
     auto it = test->begin();
     for (int j = 0; j < elements.size() && it != test->end(); ++j) {
         ASSERT(elements.at(j) == *it, "There is a problem with the iterator (++)");
