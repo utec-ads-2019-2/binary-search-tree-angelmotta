@@ -9,8 +9,7 @@ int main(int argc, char *argv[]) {
     cout << "===========================================================" << endl << endl;
 
     Tester::execute();
-
-    /*BSTree<int> binarySearchTree;
+    BSTree<int> binarySearchTree;
     cout << "size: " << binarySearchTree.size() << '\n';
     binarySearchTree.insert(8);
     cout << "size: " << binarySearchTree.size() << '\n';
@@ -46,6 +45,13 @@ int main(int argc, char *argv[]) {
     binarySearchTree.traverseInOrder();
     cout << "size: " << binarySearchTree.size() << '\n';
     cout << "root: ";
-    binarySearchTree.print_root();*/
+    binarySearchTree.print_root();
+    cout << '\n';
+    cout << "-- Iterators --" << '\n';
+    Iterator<int> itr = binarySearchTree.begin();
+    cout << (*itr) << '\n';
+    for (auto it = binarySearchTree.begin(); it != binarySearchTree.end(); ++it) {
+        cout << *it << ' ';
+    }
     return EXIT_SUCCESS;
 }

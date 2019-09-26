@@ -189,11 +189,11 @@ public:
     }
 
     Iterator<T> begin() {
-        // TODO
+        return Iterator<T>(this->root);
     }
 
     Iterator<T> end() {
-        // TODO
+        return {};
     }
 
     ~BSTree() {
