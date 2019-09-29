@@ -67,6 +67,7 @@ class Iterator {
     }
 
     T operator*() {
+        // Caso vacío?
         return this->current->data;
     }
 };
